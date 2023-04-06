@@ -97,7 +97,7 @@ export function SettingsModal({ open, onClose }: { open: boolean, onClose: () =>
 
         <Section>
 
-          <FormControl>
+          {/* <FormControl>
             <FormLabel>
               OpenAI API Key {needsApiKey ? '' : '(optional)'}
             </FormLabel>
@@ -112,7 +112,7 @@ export function SettingsModal({ open, onClose }: { open: boolean, onClose: () =>
                   the <Link level='body2' href='https://openai.com/waitlist/gpt-4-api' target='_blank'>GPT-4 waitlist</Link></>
                 : `This key will take precedence over the server's.`} <Link level='body2' href='https://platform.openai.com/account/usage' target='_blank'>Check usage here</Link>.
             </FormHelperText>
-          </FormControl>
+          </FormControl> */}
 
         </Section>
 
