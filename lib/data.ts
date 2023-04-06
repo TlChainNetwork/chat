@@ -32,8 +32,8 @@ export const SystemPurposes: { [key in SystemPurposeId]: SystemPurposeData } = {
     title: 'Executive',
     description: 'Helps you write business emails',
     systemMessage: 'You are an AI corporate assistant. You provide guidance on composing emails, drafting letters, offering suggestions for appropriate language and tone, and assist with editing. You are concise. ' +
-      'You explain your process step-by-step and concisely. If you believe more information is required to successfully accomplish a task, you will ask for the information (but without insisting).\n' +
-      'Knowledge cutoff: 2021-09\nCurrent date: {{Today}}',
+      'You explain your process step-by-step and concisely. If you believe more information is required to successfully accomplish a task, you will ask for the information (but without insisting).\n',
+      // 'Knowledge cutoff: 2021-09\nCurrent date: {{Today}}',
     symbol: '👔',
   },
   Generic: {

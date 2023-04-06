@@ -192,22 +192,22 @@ export function SettingsModal({ open, onClose }: { open: boolean, onClose: () =>
             </FormControl>
 
             <FormControl orientation='horizontal' sx={{ justifyContent: 'space-between' }}>
-              <Box sx={{ minWidth: 120 }}>
-                <FormLabel>
-                  API Host
+              {/* <Box sx={{ minWidth: 120 }}> */}
+                {/* <FormLabel> */}
+                  {/* API Host */}
                   {/*<Tooltip title='Change API host for compatibility with services like Helicone' variant='solid'>*/}
                   {/*  <InfoIcon sx={{ ml: 1, cursor: 'pointer' }} />*/}
                   {/*</Tooltip>*/}
-                </FormLabel>
-                <FormHelperText sx={{ display: 'block' }}>
+                {/* </FormLabel> */}
+                {/* <FormHelperText sx={{ display: 'block' }}>
                   For <Link level='body2' href='https://www.helicone.ai' target='_blank'>Helicone</Link>
-                </FormHelperText>
-              </Box>
-              <Input
+                </FormHelperText> */}
+              {/* </Box> */}
+              {/* <Input
                 variant='outlined' placeholder='api.openai.com'
                 value={modelApiHost} onChange={handleModelApiHostChange}
                 sx={{ flexGrow: 1 }}
-              />
+              /> */}
             </FormControl>
 
           </Stack>
