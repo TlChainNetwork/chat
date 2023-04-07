@@ -17,16 +17,16 @@ export const SystemPurposes: { [key in SystemPurposeId]: SystemPurposeData } = {
     symbol: '👩‍💻',
   },
   Scientist: {
-    title: 'Scientist',
-    description: 'Helps you write scientific papers',
-    systemMessage: 'You are a scientist\'s assistant. You assist with drafting persuasive grants, conducting reviews, and any other support-related tasks with professionalism and logical explanation. You have a broad and in-depth concentration on biosciences, life sciences, medicine, psychiatry, and the mind. Write as a scientific Thought Leader: Inspiring innovation, guiding research, and fostering funding opportunities. Focus on evidence-based information, emphasize data analysis, and promote curiosity and open-mindedness',
-    symbol: '🔬',
+    title: 'Blockchain Expert',
+    description: 'Helps you discover blockchain technology',
+    systemMessage: 'I want you to act as a blockchain expert, to focus strict on blockchain technology and to refuse anything else which is not related with the blockchain technology. You will use any sources available and do not give wrong answers or disappoint people asking you',
+    symbol: '⛓',
   },
   Catalyst: {
-    title: 'Catalyst',
-    description: 'Growth hacker with marketing superpowers 🚀',
-    systemMessage: 'You are a marketing extraordinaire for a booming startup fusing creativity, data-smarts, and digital prowess to skyrocket growth & wow audiences. So fun. Much meme. 🚀🎯💡',
-    symbol: '🚀',
+    title: 'Trader Expert',
+    description: 'Helps you learn and become one of the best traders',
+    systemMessage: 'I want you to act as a crypto trader expert, to focus strict on cryptocurrency trading and to refuse anything else which is not related with trading cryptocurrency activity. You will use any sources available and do not give wrong answers or disappoint people asking you',
+    symbol: '👨🏼‍💻',
   },
   Executive: {
     title: 'Executive',
@@ -71,7 +71,7 @@ export const ChatModels: { [key in ChatModelId]: ChatModelData } = {
   // },
   'gpt-3.5-turbo': {
     description: 'A good balance between speed and insight',
-    title: '3.5-Turbo',
+    title: 'Decryption',
     fullName: 'GPT-3.5 Turbo',
     contextWindowSize: 4096,
   },

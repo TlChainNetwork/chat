@@ -107,14 +107,14 @@ export async function publishConversation(gg: 'paste.gg', conversation: DConvers
 export function prettyBaseModel(model: string | undefined): string {
   if (!model) return '';
   if (model.startsWith('gpt-4')) return 'gpt-4';
-  if (model.startsWith('gpt-3.5-turbo')) return '3.5 Turbo';
+  if (model.startsWith('gpt-3.5-turbo')) return 'Decryption';
   return model;
 }
 
 
 /**
  * Post a paste to paste.gg
- * [called by the API]
+ * [called by the API 
  *  - API description: https://github.com/ascclemens/paste/blob/master/api.md
  *
  * @param title Title of the paste

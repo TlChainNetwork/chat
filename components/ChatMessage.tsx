@@ -22,13 +22,14 @@ import Face6Icon from '@mui/icons-material/Face6';
 import FastForwardIcon from '@mui/icons-material/FastForward';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
-import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
+import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
 
 import { DMessage } from '@/lib/store-chats';
 import { Link } from '@/components/util/Link';
 import { cssRainbowColorKeyframes, foolsMode } from '@/lib/theme';
 import { prettyBaseModel } from '@/lib/publish';
 import { useSettingsStore } from '@/lib/store-settings';
+import { CurrencyBitcoin } from '@mui/icons-material';
 
 
 /// Utilities to parse messages into blocks of text and code
@@ -322,7 +323,7 @@ export function ChatMessage(props: { message: DMessage, disableSend: boolean, on
       if (!showAvatars)
         return null;
       if (typeof messageAvatar === 'string' && messageAvatar)
-        return <Avatar alt={messageSender} src={messageAvatar} />;
+        // return <Avatar alt={messageSender} src={messageAvatar} />;
       switch (messageRole) {
         case 'system':
           return <SettingsSuggestIcon sx={{ width: 40, height: 40 }} />;  // https://em-content.zobj.net/thumbs/120/apple/325/robot_1f916.png
@@ -330,15 +331,15 @@ export function ChatMessage(props: { message: DMessage, disableSend: boolean, on
           // display a gif avatar when the assistant is typing (fools mode)
           if (foolsMode && messageTyping)
             return <Avatar
-              alt={messageSender} variant='plain'
-              src='https://i.giphy.com/media/jJxaUysjzO9ri/giphy.webp'
+              // alt={messageSender} variant='plain'
+              src='https://i.giphy.com/media/jJxaUysjzO9ri/giphy.webp' //probabil de schimbat
               sx={{
                 width: 64,
                 height: 64,
                 borderRadius: 8,
               }}
             />;
-          return <SmartToyOutlinedIcon sx={{ width: 40, height: 40 }} />; // https://mui.com/static/images/avatar/2.jpg
+          return <CurrencyBitcoinIcon sx={{ width: 40, height: 40 }} />; // https://mui.com/static/images/avatar/2.jpg
         case 'user':
           return <Face6Icon sx={{ width: 40, height: 40 }} />;            // https://www.svgrepo.com/show/306500/openai.svg
       }
