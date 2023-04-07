@@ -15,7 +15,7 @@ export interface MyAppProps extends AppProps {
 }
 
 export default function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }: MyAppProps) {
-  return <div style={{ backgroundImage: 'url("https://decryption.com/static/media/main-background-2.6e7fc3b9.jpg")', backgroundSize: 'contain', minHeight: '100vh' }}>
+  return <div style={{ backgroundImage: 'url("https://decryption.com/static/media/main-background-2.6e7fc3b9.jpg")', backgroundSize: 'cover', minHeight: '100vh' }}>
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name='viewport' content='initial-scale=1, width=device-width' />
