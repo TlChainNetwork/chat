@@ -2,20 +2,16 @@ import * as React from 'react';
 
 import { IconButton, ListDivider, ListItem, ListItemDecorator, Menu, MenuItem, Sheet, Stack, Switch, Typography, useColorScheme } from '@mui/joy';
 import { SxProps } from '@mui/joy/styles/types';
-import AddIcon from '@mui/icons-material/Add';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
-import LunchDiningIcon from '@mui/icons-material/LunchDining';
-import MenuIcon from '@mui/icons-material/Menu';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 import SwapVertIcon from '@mui/icons-material/SwapVert';
 
 import { ChatModelId, ChatModels, SystemPurposeId, SystemPurposes } from '@/lib/data';
-import { Link } from '@/components/util/Link';
 import { StyledDropdown } from '@/components/util/StyledDropdown';
 import { foolsMode } from '@/lib/theme';
 import { shallow } from 'zustand/shallow';

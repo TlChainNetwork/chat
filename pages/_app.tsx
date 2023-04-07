@@ -7,7 +7,6 @@ import { CssBaseline, CssVarsProvider } from '@mui/joy';
 
 import { createEmotionCache, theme } from '@/lib/theme';
 
-
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
@@ -16,7 +15,7 @@ export interface MyAppProps extends AppProps {
 }
 
 export default function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }: MyAppProps) {
-  return <>
+  return <div style={{ backgroundImage: 'url("https://decryption.com/static/media/main-background-2.6e7fc3b9.jpg")', backgroundSize: 'contain', minHeight: '100vh' }}>
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name='viewport' content='initial-scale=1, width=device-width' />
@@ -28,5 +27,5 @@ export default function MyApp({ Component, emotionCache = clientSideEmotionCache
       </CssVarsProvider>
     </CacheProvider>
     <VercelAnalytics debug={false} />
-  </>;
+  </div>;
 }

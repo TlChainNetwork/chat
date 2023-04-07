@@ -299,21 +299,22 @@ export function ChatMessage(props: { message: DMessage, disableSend: boolean, on
   const { isAssistantError, errorMessage } = explainErrorInMessage(messageText, fromAssistant, messageModelId);
 
 
-  // theming
   let background = theme.vars.palette.background.surface;
-  switch (messageRole) {
-    case 'system':
-      if (wasEdited)
-        background = theme.vars.palette.warning.plainHoverBg;
-      break;
-    case 'user':
-      background = theme.vars.palette.primary.plainHoverBg; // .background.level1
-      break;
-    case 'assistant':
-      if (isAssistantError && !errorMessage)
-        background = theme.vars.palette.danger.softBg;
-      break;
-  }
+switch (messageRole) {
+  case 'system':
+    if (wasEdited)
+      background = theme.vars.palette.warning.plainHoverBg;
+    break;
+  case 'user':
+    background = theme.vars.palette.primary.plainHoverBg; // .background.level1
+    break;
+  case 'assistant':
+    if (isAssistantError && !errorMessage)
+      background = theme.vars.palette.danger.softBg;
+    else
+      background = 'linear-gradient(90deg, #ff7f50, #ff2d55, #ff0080, #e600ac, #bf00ff, #4d4dff, #00bfff, #00ffbf'; // Set background to black
+    break;
+}
 
 
   // avatar
