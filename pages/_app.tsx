@@ -19,6 +19,7 @@ export default function MyApp({ Component, emotionCache = clientSideEmotionCache
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name='viewport' content='initial-scale=1, width=device-width' />
+        <title>AI Decryption Chat</title> {/* Add title here */}
       </Head>
       <CssVarsProvider defaultMode='light' theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
