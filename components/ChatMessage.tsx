@@ -29,7 +29,6 @@ import { Link } from '@/components/util/Link';
 import { cssRainbowColorKeyframes, foolsMode } from '@/lib/theme';
 import { prettyBaseModel } from '@/lib/publish';
 import { useSettingsStore } from '@/lib/store-settings';
-import { CurrencyBitcoin } from '@mui/icons-material';
 
 
 /// Utilities to parse messages into blocks of text and code
@@ -332,7 +331,7 @@ export function ChatMessage(props: { message: DMessage, disableSend: boolean, on
           if (foolsMode && messageTyping)
             return <Avatar
               // alt={messageSender} variant='plain'
-              src='https://i.giphy.com/media/jJxaUysjzO9ri/giphy.webp' //probabil de schimbat
+              src='/new.gif' //probabil de schimbat
               sx={{
                 width: 64,
                 height: 64,
@@ -387,30 +386,31 @@ export function ChatMessage(props: { message: DMessage, disableSend: boolean, on
 
       {/* Avatar */}
       {showAvatars && <Stack
-        sx={{ alignItems: 'center', minWidth: { xs: 50, md: 64 }, textAlign: 'center' }}
-        onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}
-        onClick={event => setMenuAnchor(event.currentTarget)}>
+  sx={{ alignItems: 'center', minWidth: { xs: 50, md: 64 }, textAlign: 'center' }}
+  onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}
+  onClick={event => setMenuAnchor(event.currentTarget)}>
 
-        {isHovering ? (
-          <IconButton variant='soft' color={fromAssistant ? 'neutral' : 'primary'}>
-            <MoreVertIcon />
-          </IconButton>
-        ) : (
-          avatarEl
-        )}
+  {isHovering ? (
+    <IconButton variant='soft' color={fromAssistant ? 'neutral' : 'primary'}>
+      <MoreVertIcon />
+    </IconButton>
+  ) : (
+    <img src="/logo.png" alt="Avatar" />
+  )}
 
-        {fromAssistant && (
-          <Tooltip title={messageModelId || 'unk-model'} variant='solid'>
-            <Typography level='body2' sx={messageTyping
-              ? { animation: `${cssRainbowColorKeyframes} 5s linear infinite`, fontWeight: 500 }
-              : { fontWeight: 500 }
-            }>
-              {prettyBaseModel(messageModelId)}
-            </Typography>
-          </Tooltip>
-        )}
+  {fromAssistant && (
+    <Tooltip title={messageModelId || 'unk-model'} variant='solid'>
+      <Typography level='body2' sx={messageTyping
+        ? { animation: `${cssRainbowColorKeyframes} 5s linear infinite`, fontWeight: 500 }
+        : { fontWeight: 500 }
+      }>
+        {prettyBaseModel(messageModelId)}
+      </Typography>
+    </Tooltip>
+  )}
 
-      </Stack>}
+</Stack>}
+
 
 
       {/* Edit / Blocks */}

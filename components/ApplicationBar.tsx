@@ -39,6 +39,7 @@ function PagesMenu(props: { pagesMenuAnchor: HTMLElement | null, onClose: () => 
     open={!!props.pagesMenuAnchor} anchorEl={props.pagesMenuAnchor} onClose={props.onClose}
     disablePortal={false}>
 
+
     <ListItem>
       <Typography level='body2'>
         Active chats
@@ -68,27 +69,26 @@ function PagesMenu(props: { pagesMenuAnchor: HTMLElement | null, onClose: () => 
       </MenuItem>
     ))}
 
-    <MenuItem disabled={true}>
+    {/* <MenuItem disabled={true}>
       <ListItemDecorator><AddIcon /></ListItemDecorator>
       <Typography sx={{ opacity: 0.5 }}>
         New chat (soon)
-        {/* We need stable Chat and Message IDs, and one final review to the data structure of Conversation for future-proofing */}
       </Typography>
-    </MenuItem>
+    </MenuItem> */}
 
 
-    <ListItem>
+    {/* <ListItem>
       <Typography level='body2'>
         Scratchpad
       </Typography>
-    </ListItem>
+    </ListItem> */}
 
-    <MenuItem>
+    {/* <MenuItem>
       <ListItemDecorator />
       <Typography sx={{ opacity: 0.5 }}>
         Feature <Link href='https://github.com/enricoros/nextjs-chatgpt-app/issues/17' target='_blank'>#17</Link>
       </Typography>
-    </MenuItem>
+    </MenuItem> */}
 
   </Menu>;
 }
@@ -166,9 +166,9 @@ export function ApplicationBar({ onClearConversation, onDownloadConversationJSON
         ...(sx || {}),
       }}>
 
-      <IconButton variant='plain' onClick={event => setPagesMenuAnchor(event.currentTarget)}>
-        {foolsMode ? <LunchDiningIcon /> : <MenuIcon />}
-      </IconButton>
+<IconButton variant='plain' onClick={event => setPagesMenuAnchor(event.currentTarget)}>
+  {foolsMode ? <img src="/logo.png" alt="Lunch" /> : <img src="/logo.png" alt="Menu" />}
+</IconButton>
 
       <Stack direction='row' sx={{ my: 'auto' }}>
 
